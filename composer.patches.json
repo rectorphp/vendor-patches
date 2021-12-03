@@ -1,10 +1,10 @@
 {
     "patches": {
-        "symfony/dependency-injection": [
-            "https://raw.githubusercontent.com/rectorphp/vendor-patches/master/symfony-dependency-injection-loader-configurator-servicesconfigurator-php.patch"
-        ],
-        "danielstjules/stringy": [
-            "https://raw.githubusercontent.com/rectorphp/vendor-patches/master/danielstjules-stringy-src-stringy-php.patch"
-        ]
+        "symfony/dependency-injection": {
+            "symfony dependency injection": "https://raw.githubusercontent.com/rectorphp/vendor-patches/master/symfony-dependency-injection-loader-configurator-servicesconfigurator-php.patch"
+        },
+        "danielstjules/stringy": {
+            "danielstjules stringy": "https://raw.githubusercontent.com/rectorphp/vendor-patches/master/danielstjules-stringy-src-stringy-php.patch"
+        }
     }
 }
