@@ -12,9 +12,7 @@ The composer patches packages does not work as intuitively as you max expect. Ye
 
 <br>
 
-1. The [external patch file](https://github.com/cweagans/composer-patches#using-an-external-patch-file) works only for main `rector/rector-src` repository. It cannot be used e.g. for dev packages that depend on `rector/rector-src`.
-
-:red_circle:
+1. The [external patch file](https://github.com/cweagans/composer-patches#using-an-external-patch-file) works only for main `rector/rector-src` repository. It cannot be used e.g. for dev packages that depend on `rector/rector-src :red_circle:
 
 2. The patches must be defined in [`rector/rector-src` in `composer.json`](https://github.com/rectorphp/rector-src/blob/0dd833b1e29ba665bbb3acad85a6359f701f2e18/composer.json#L154-L164):
 
