@@ -1,13 +1,13 @@
 {
-	"patches": {
-		"danielstjules/stringy": [
-			"https://raw.githubusercontent.com/rectorphp/vendor-patches/master/danielstjules-stringy-src-stringy-php.patch"
-		],
-		"helmich/typo3-typoscript-parser": [
-			"https://raw.githubusercontent.com/rectorphp/vendor-patches/master//helmich-typo3-typoscript-parser-parser-tokenstream-php.patch"
-		],
-		"symfony/dependency-injection": [
-			"https://raw.githubusercontent.com/rectorphp/vendor-patches/master/symfony-dependency-injection-loader-configurator-servicesconfigurator-php.patch"
-		]
-	}
+    "patches": {
+        "danielstjules/stringy": [
+            "https://raw.githubusercontent.com/rectorphp/vendor-patches/master/danielstjules-stringy-src-stringy-php.patch"
+        ],
+        "helmich/typo3-typoscript-parser": [
+            "https://raw.githubusercontent.com/rectorphp/vendor-patches/master/helmich-typo3-typoscript-parser-parser-tokenstream-php.patch"
+        ],
+        "symfony/dependency-injection": [
+            "https://raw.githubusercontent.com/rectorphp/vendor-patches/master/symfony-dependency-injection.patch"
+        ]
+    }
 }
