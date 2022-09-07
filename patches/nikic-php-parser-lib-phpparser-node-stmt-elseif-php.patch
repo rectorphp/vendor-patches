@@ -10,12 +10,3 @@
 +class ElseIf_ extends Node\Stmt implements StmtsAwareInterface {
      /** @var Node\Expr Condition */
      public $cond;
-@@ -27,7 +28,7 @@
-     public function getSubNodeNames() : array {
-         return ['cond', 'stmts'];
-     }
--
-+
-     public function getType() : string {
-         return 'Stmt_ElseIf';
-     }

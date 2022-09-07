@@ -10,12 +10,4 @@
 +class Case_ extends Node\Stmt implements StmtsAwareInterface {
      /** @var null|Node\Expr Condition (null for default) */
      public $cond;
-@@ -27,7 +28,7 @@
-     public function getSubNodeNames() : array {
-         return ['cond', 'stmts'];
-     }
--
-+
-     public function getType() : string {
-         return 'Stmt_Case';
-     }
+

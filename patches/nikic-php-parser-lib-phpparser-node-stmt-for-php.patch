@@ -10,12 +10,3 @@
 +class For_ extends Node\Stmt implements StmtsAwareInterface {
      /** @var Node\Expr[] Init expressions */
      public $init;
-@@ -36,7 +37,7 @@
-     public function getSubNodeNames() : array {
-         return ['init', 'cond', 'loop', 'stmts'];
-     }
--
-+
-     public function getType() : string {
-         return 'Stmt_For';
-     }
