@@ -8,5 +8,5 @@
 
 -class Namespace_ extends Node\Stmt {
 +class Namespace_ extends Node\Stmt implements StmtsAwareInterface {
-     /** @var Node\Stmt[] Statements */
-     public $stmts;
+    /* For use in the "kind" attribute */
+    public const KIND_SEMICOLON = 1;
