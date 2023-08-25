@@ -4,7 +4,8 @@
      public static function width(?string $string): int
      {
          $string ??= '';
-+        return \mb_strlen($string);
++        // return early, to prevent a dependency on symfony/string to ease downgrading rector.
++        return \mb_strwidth($string);
 
          if (preg_match('//u', $string)) {
              return (new UnicodeString($string))->width(false);
@@ -12,6 +13,7 @@
      public static function length(?string $string): int
      {
          $string ??= '';
++        // return early, to prevent a dependency on symfony/string to ease downgrading rector.
 +        return \mb_strlen($string);
 
          if (preg_match('//u', $string)) {
