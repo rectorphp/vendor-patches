@@ -1,21 +1,19 @@
 --- /dev/null
 +++ ../lib/PhpParser/Node/Stmt/For_.php
-@@ -3,8 +3,9 @@
- namespace PhpParser\Node\Stmt;
-
+@@ -4,7 +4,7 @@
+ 
  use PhpParser\Node;
-+use Rector\Contract\PhpParser\Node\StmtsAwareInterface;
-
+ 
 -class For_ extends Node\Stmt
-+class For_ extends Node\Stmt implements StmtsAwareInterface
++class For_ extends Node\Stmt implements \Rector\Contract\PhpParser\Node\StmtsAwareInterface
  {
      /** @var Node\Expr[] Init expressions */
      public $init;
-@@ -36,7 +37,7 @@
+@@ -36,7 +36,7 @@
      public function getSubNodeNames() : array {
          return ['init', 'cond', 'loop', 'stmts'];
      }
--
+-    
 +
      public function getType() : string {
          return 'Stmt_For';
