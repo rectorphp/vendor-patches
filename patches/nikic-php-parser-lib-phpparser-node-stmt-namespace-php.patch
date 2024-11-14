@@ -6,8 +6,8 @@
  use PhpParser\Node;
 +use Rector\Contract\PhpParser\Node\StmtsAwareInterface;
 
--class Namespace_ extends Node\Stmt
-+class Namespace_ extends Node\Stmt implements StmtsAwareInterface
- {
-     /** @var Node\Stmt[] Statements */
-     public $stmts;
+-class Namespace_ extends Node\Stmt {
++class Namespace_ extends Node\Stmt implements StmtsAwareInterface {
+     /* For use in the "kind" attribute */
+     public const KIND_SEMICOLON = 1;
+     public const KIND_BRACED = 2;
