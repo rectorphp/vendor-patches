@@ -10,3 +10,4 @@
 +class Closure extends Expr implements FunctionLike, StmtsAwareInterface {
      /** @var bool Whether the closure is static */
      public bool $static;
+     /** @var bool Whether to return by reference */
