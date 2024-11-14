@@ -6,8 +6,8 @@
  use PhpParser\Node;
 +use Rector\Contract\PhpParser\Node\StmtsAwareInterface;
 
--class TryCatch extends Node\Stmt
-+class TryCatch extends Node\Stmt implements StmtsAwareInterface
- {
+-class TryCatch extends Node\Stmt {
++class TryCatch extends Node\Stmt implements StmtsAwareInterface {
      /** @var Node\Stmt[] Statements */
-     public $stmts;
+     public array $stmts;
+     /** @var Catch_[] Catches */
