@@ -1,14 +1,12 @@
 --- /dev/null
 +++ ../lib/PhpParser/Node/Expr/Closure.php
-@@ -6,8 +6,9 @@
- use PhpParser\Node;
+@@ -6,8 +6,9 @@ use PhpParser\Node;
  use PhpParser\Node\ClosureUse;
  use PhpParser\Node\Expr;
  use PhpParser\Node\FunctionLike;
 +use Rector\Contract\PhpParser\Node\StmtsAwareInterface;
 
--class Closure extends Expr implements FunctionLike
-+class Closure extends Expr implements FunctionLike, StmtsAwareInterface
- {
+-class Closure extends Expr implements FunctionLike {
++class Closure extends Expr implements FunctionLike, StmtsAwareInterface {
      /** @var bool Whether the closure is static */
-     public $static;
+     public bool $static;
