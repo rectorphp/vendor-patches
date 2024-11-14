@@ -7,6 +7,6 @@
 +use Rector\Contract\PhpParser\Node\StmtsAwareInterface;
 
 -class Finally_ extends Node\Stmt {
-+class Finally_ extends Node\Stmt, StmtsAwareInterface {
++class Finally_ extends Node\Stmt implements StmtsAwareInterface {
      /** @var Node\Stmt[] Statements */
      public array $stmts;
