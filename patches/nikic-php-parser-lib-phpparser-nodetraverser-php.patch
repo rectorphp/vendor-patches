@@ -1,3 +1,5 @@
+--- /dev/null
++++ ../lib/PhpParser/NodeTraverser.php
 @@ -110,7 +110,8 @@ class NodeTraverser implements NodeTraverserInterface {
              $traverseChildren = true;
              $visitorIndex = -1;
