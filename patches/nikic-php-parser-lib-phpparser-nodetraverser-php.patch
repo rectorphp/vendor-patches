@@ -24,7 +24,7 @@
              $visitorIndex = -1;
 
 -            foreach ($this->visitors as $visitorIndex => $visitor) {
-+            $visitors = $this->getVisitorsForNode($subNode);
++            $visitors = $this->getVisitorsForNode($node);
 +            foreach ($visitors as $visitorIndex => $visitor) {
                  $return = $visitor->enterNode($node);
                  if (null !== $return) {
