@@ -1,44 +1,44 @@
 --- /dev/null
 +++ ../lib/PhpParser/NodeTraverser.php
-@@ -103,7 +103,8 @@ class NodeTraverser implements NodeTraverserInterface {
-                 $traverseChildren = true;
-                 $visitorIndex = -1;
+@@ -110,7 +110,8 @@ class NodeTraverser implements NodeTraverserInterface {
+             $traverseChildren = true;
+             $visitorIndex = -1;
 
--                foreach ($this->visitors as $visitorIndex => $visitor) {
-+                $visitors = $this->getVisitorsForNode($subNode);
-+                foreach ($visitors as $visitorIndex => $visitor) {
-                     $return = $visitor->enterNode($subNode);
-                     if (null !== $return) {
-                         if ($return instanceof Node) {
-@@ -136,7 +137,7 @@ class NodeTraverser implements NodeTraverserInterface {
-                 }
+-            foreach ($this->visitors as $visitorIndex => $visitor) {
++            $visitors = $this->getVisitorsForNode($subNode);
++            foreach ($visitors as $visitorIndex => $visitor) {
+                 $return = $visitor->enterNode($subNode);
+                 if (null !== $return) {
+                     if ($return instanceof Node) {
+@@ -143,7 +144,7 @@ class NodeTraverser implements NodeTraverserInterface {
+             }
 
-                 for (; $visitorIndex >= 0; --$visitorIndex) {
--                    $visitor = $this->visitors[$visitorIndex];
-+                    $visitor = $visitors[$visitorIndex];
-                     $return = $visitor->leaveNode($subNode);
+             for (; $visitorIndex >= 0; --$visitorIndex) {
+-                $visitor = $this->visitors[$visitorIndex];
++                $visitor = $visitors[$visitorIndex];
+                 $return = $visitor->leaveNode($subNode);
 
-                     if (null !== $return) {
-@@ -180,7 +181,8 @@ class NodeTraverser implements NodeTraverserInterface {
-                 $traverseChildren = true;
-                 $visitorIndex = -1;
+                 if (null !== $return) {
+@@ -192,7 +193,8 @@ class NodeTraverser implements NodeTraverserInterface {
+             $traverseChildren = true;
+             $visitorIndex = -1;
 
--                foreach ($this->visitors as $visitorIndex => $visitor) {
-+                $visitors = $this->getVisitorsForNode($node);
-+                foreach ($visitors as $visitorIndex => $visitor) {
-                     $return = $visitor->enterNode($node);
-                     if (null !== $return) {
-                         if ($return instanceof Node) {
-@@ -219,7 +221,7 @@ class NodeTraverser implements NodeTraverserInterface {
-                 }
+-            foreach ($this->visitors as $visitorIndex => $visitor) {
++            $visitors = $this->getVisitorsForNode($node);
++            foreach ($visitors as $visitorIndex => $visitor) {
+                 $return = $visitor->enterNode($node);
+                 if (null !== $return) {
+                     if ($return instanceof Node) {
+@@ -231,7 +233,7 @@ class NodeTraverser implements NodeTraverserInterface {
+             }
 
-                 for (; $visitorIndex >= 0; --$visitorIndex) {
--                    $visitor = $this->visitors[$visitorIndex];
-+                    $visitor = $visitors[$visitorIndex];
-                     $return = $visitor->leaveNode($node);
+             for (; $visitorIndex >= 0; --$visitorIndex) {
+-                $visitor = $this->visitors[$visitorIndex];
++                $visitor = $visitors[$visitorIndex];
+                 $return = $visitor->leaveNode($node);
 
-                     if (null !== $return) {
-@@ -259,6 +261,14 @@ class NodeTraverser implements NodeTraverserInterface {
+                 if (null !== $return) {
+@@ -268,6 +270,14 @@ class NodeTraverser implements NodeTraverserInterface {
          return $nodes;
      }
 
