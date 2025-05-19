@@ -8,7 +8,7 @@ This meta package makes use of [cweagans/composer-patches](https://github.com/cw
 
 ## How to Use
 
-The composer patches packages does not work as intuitively as you max expect. Yet, there is a combination, that clicks :)
+The composer patches packages does not work as intuitively as you may expect. Yet, there is a combination, that clicks :)
 
 <br>
 
